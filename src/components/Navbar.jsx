@@ -1,5 +1,6 @@
 import { navLinks } from '../data/navLinks';
 import { schoolInfo } from '../data/schoolInfo';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -11,7 +12,7 @@ const Navbar = () => {
             <ul className="nav-links">
                 {navLinks.map((link, index) => (
                     <li key={index}>
-                        <a href={link.path}>{link.label}</a>
+                        <Link to={link.path}>{link.label}</Link>
                     </li>
                 ))}
             </ul>
